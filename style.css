@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  position: relative;
+  font-size: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  overflow-x: hidden;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  line-height: 0.85;
+  color: #ddd;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  padding-block: 3.3rem;
+  padding-inline: 2.2rem;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 5px 2px rgba(0, 0, 0, 0.748), 0 8px 2px rgb(0, 0, 0);
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 69vw;
+  margin-inline: auto;
+}
+
+main .btns-wrapper {
+  position: relative;
+  bottom: -1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+#canvas {
+  background: rgba(201, 201, 201, 0.377);
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(145deg, #191919, #1e1e1e);
+  box-shadow: 33px 33px 66px #0c0c0c, -33px -33px 66px #2c2c2c;
+}
+
+img.icon {
+  height: 25px;
+  width: auto;
+  padding-right: 1rem;
+}
+img.play-icon {
+  height: 20px;
+  width: auto;
+}
+.setting {
+  position: relative;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10vw;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0),
+    rgba(51, 51, 51, 0.397),
+    rgb(0, 0, 0)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.185);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+  box-shadow: 33px 33px 66px #0c0c0c, -33px -33px 66px #2c2c2c;
+}
+
+.setting .option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem;
+}
+.setting .option-clr {
+  margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setting .option-clr img {
+  display: none;
+}
+.setting .option-clr label {
+  padding-right: 1rem;
+}
+
+label,
+output {
+  color: #bcbcbc;
+}
+
+label {
+  padding-bottom: 0.5rem;
+}
+output {
+  padding-top: 0.5rem;
+}
+
+.btn {
+  background: linear-gradient(
+    180deg,
+    rgba(112, 112, 112, 0.11),
+    rgba(0, 0, 58, 0.075)
+  );
+  color: #d6d6d6;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-shadow: 0 3px 3px rgb(27, 27, 27);
+  width: 16rem;
+  border-radius: 0.36rem;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.185);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.849);
+  transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
+  margin: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:hover {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.253);
+}
+
+@media screen and (max-width: 780px) {
+  .btn {
+    width: auto;
+  }
+  .btn img {
+    padding: 0;
+  }
+  .btn span {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .setting {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type='range'] {
+    overflow: hidden;
+    width: 80px;
+    appearance: none;
+    background-color: #d8d8d8;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 12px;
+    -webkit-appearance: none;
+    color: #000000;
+    margin-top: -1px;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    width: 12px;
+    -webkit-appearance: none;
+    height: 12px;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -80px 0 0 80px #000000;
+  }
+}
+input[type='range']::-moz-range-progress {
+  background-color: #000000;
+}
+input[type='range']::-moz-range-track {
+  background-color: #d8d8d8;
+}
+input[type='range']::-ms-fill-lower {
+  background-color: #000000;
+}
+input[type='range']::-ms-fill-upper {
+  background-color: #d8d8d8;
+}
+
+input[type='range'] {
+  box-shadow: 3px 3px 6px #000000, -3px -3px 6px #1f1f1f;
+}

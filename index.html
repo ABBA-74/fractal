@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fractal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Tree Fractal Generator</h1>
+    <main>
+      <canvas id="canvas"></canvas>
+      <div class="btns-wrapper">
+        <button id="clear-canvas" class="btn">
+          <img
+            src="./assets/img/clear-icon.png"
+            class="icon clear-icone"
+            alt="icone"
+          />
+          <span>Clear Canvas</span>
+        </button>
+        <button id="rnd-fractal" class="btn">
+          <img
+            src="./assets/img/random-icon.png"
+            class="icon random-icon"
+            alt="icone"
+          />
+          <span>Random Fractal</span>
+        </button>
+      </div>
+    </main>
+    <div class="setting">
+      <div class="option opt-angle">
+        <label for="angle">Tilting (deg)</label>
+        <input
+          type="range"
+          id="angle"
+          name="angle"
+          min="-28"
+          max="28"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>0</output>
+      </div>
+      <div class="option opt-length">
+        <label for="length">Level Leafs</label>
+        <input
+          type="range"
+          id="length"
+          name="length"
+          min="0"
+          max="6"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>3</output>
+      </div>
+      <div class="option opt-branch-width">
+        <label for="branch-width">Branch Width</label>
+        <input
+          type="range"
+          id="branch-width"
+          name="branch-width"
+          min="1"
+          max="100"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>50</output>
+      </div>
+      <div class="option-clr opt-color1">
+        <label for="color1">Branch</label>
+        <input type="color" id="color1" name="color1" value="#9F5F04" />
+      </div>
+      <div class="option-clr opt-color2">
+        <label for="color2">leafs</label>
+        <input type="color" id="color2" name="color2" value="#2FFE20" />
+      </div>
+      <button id="generate-fractal" class="btn">
+        <img
+          src="./assets/img/play-icon.png"
+          class="icon play-icon"
+          alt="icone"
+        />
+        <span>Generate Fractal</span>
+      </button>
+    </div>
+  </body>
+</html>
